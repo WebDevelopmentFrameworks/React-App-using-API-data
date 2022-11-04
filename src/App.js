@@ -1,4 +1,6 @@
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
 
 // Link example
 const URL =
@@ -6,10 +8,19 @@ const URL =
 
 function App() {
   return (
-    <div>
+    <>
+      <Header />
       <h1>Hello world</h1>
       <p>{process.env.REACT_APP_API_KEY}</p>
-    </div>
+      <div>
+        <Routes>
+          <Route path="/" element="home" />
+          <Route path="/ingredients" element="Ingredients" />
+          <Route path="/recipe" element="Recipe" />
+          <Route path="/wine" element="Wine" />
+        </Routes>
+      </div>
+    </>
   );
 }
 
