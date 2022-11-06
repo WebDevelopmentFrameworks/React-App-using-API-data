@@ -2,3 +2,84 @@ div {
   margin: 0;
   padding: 0;
 }
+
+header {
+  flex-basis: 10%;
+  background-color: white;
+}
+
+#Content {
+  max-width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contentFlexHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 50%;
+  gap: 5%;
+}
+
+.homePage {
+  text-align: center;
+}
+
+.contentFlexAbout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.aboutContainer {
+  max-width: 453px;
+}
+
+.contentFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.recipeContainer {
+  flex-basis: 40%;
+}
+
+.recipeContainer:nth-of-type(1) {
+  flex-grow: 0.6;
+}
+
+#ScrollRecipe {
+  min-height: 500px;
+  max-height: 500px;
+  overflow: auto;
+  border: 1px solid #cccc;
+}
+
+#ingredients {
+  padding-left: 50px;
+}
+
+.img-fluid {
+  max-width: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+footer {
+  flex-basis: 5%;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  background-color: #c5cbe3;
+  color: black;
+}
