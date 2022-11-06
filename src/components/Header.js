@@ -3,27 +3,23 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div className="container">
-      <header className="d-flex justify-content-center py-3">
-        <ul className="nav nav-pills">
-          <li className="nav-item">
-            <Link to="/" className="nav-link active" aria-current="page">
-              Logo
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/ingredients" className="nav-link">
-              Search ingredients
-            </Link>
-          </li>
+    <div>
+      <header className="d-flex justify-content-start py-3 mb-4 border-bottom">
+        <Link
+          to="/"
+          className="d-flex align-items-center text-dark text-decoration-none"
+        >
+          <span className="fs-4 ps-5">Recipe Search</span>
+        </Link>
+        <ul className="nav justify-content-center ms-5">
           <li className="nav-item">
             <Link to="/recipe" className="nav-link">
               Search recipe
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/wine" className="nav-link">
-              Search wine
+            <Link to="/about" className="nav-link">
+              About
             </Link>
           </li>
         </ul>
