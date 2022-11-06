@@ -1,26 +1,18 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-
-// Link example
-const URL =
-  "https://api.spoonacular.com/recipes/716429/information?apiKey=YOUR-API-KEY&includeNutrition=true";
+import { Header, RecipeByName, Footer, About, Home } from "./components";
 
 function App() {
   return (
-    <>
+    <div id="Content">
       <Header />
-      <h1>Hello world</h1>
-      <p>{process.env.REACT_APP_API_KEY}</p>
-      <div>
-        <Routes>
-          <Route path="/" element="home" />
-          <Route path="/ingredients" element="Ingredients" />
-          <Route path="/recipe" element="Recipe" />
-          <Route path="/wine" element="Wine" />
-        </Routes>
-      </div>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipe" element={<RecipeByName />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
